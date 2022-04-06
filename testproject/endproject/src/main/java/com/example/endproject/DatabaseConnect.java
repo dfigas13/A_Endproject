@@ -14,15 +14,13 @@ import java.sql.*;
 public class DatabaseConnect {
 
     public static final String DB_URL = "jdbc:mariadb://localhost:3306/room_planning?useSSL=false&characterEncoding=utf8";
-    public static final String DB_PASS = "";
     public static final String DB_USER = "root";
-
+    public static final String DB_PASS = "";
 
     public static String loginQuery = "{call getLoginData(?,?)}";
 
 
-
-    public static Connection getConnection() {
+    public static Connection connect() {
         Connection connection;
         try {
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
@@ -35,9 +33,8 @@ public class DatabaseConnect {
     }
 
 
-
     public static boolean checkUsernameAndPassword(String username, String password) throws SQLException {
-        Connection conn = DatabaseConnect.getConnection();
+        Connection conn = DatabaseConnect.connect();
         CallableStatement statement;
         ResultSet result;
 
@@ -67,7 +64,7 @@ public class DatabaseConnect {
         return true;
     }
 
- /*   public static void changeView(String path, String title, Button button) {
+   /* public static void changeView(String path, String title, Button button) {
         Stage stage = getCurrentStage(button);
         FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource(path));
         Scene scene = null;
@@ -84,7 +81,7 @@ public class DatabaseConnect {
 
     public static Stage getCurrentStage(Button button) {
         return (Stage) button.getScene().getWindow();
-    }*/
-
+    }
+*/
 
 }

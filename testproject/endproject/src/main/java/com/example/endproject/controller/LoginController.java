@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -24,20 +25,23 @@ public class LoginController{
     private PasswordField passwordTf;
     @FXML
     public static Button logIn;
+    @FXML
+    private Label loginMessage;
 
     @FXML
     private void logIn(ActionEvent actionEvent) throws SQLException {
-       // if (checkField()) {
+       if (checkField()) {
             DatabaseConnect.checkUsernameAndPassword(usernameTf.getText(), passwordTf.getText());
-
-        //}
+        } else {
+          // loginMessage.setText("Falsche Username oder Password");
+      }
         // changeView(Constants.ADMIN_PAGE, "Welcome Admin");
         // changeView(Constants.TRAINER_PAGE, "Welcome Trainer");
     }
 
     @FXML
     private void guestLog(ActionEvent actionEvent) {
-        changeView(Constants.OPEN_PAGE, "Stundenplan");
+        changeView(Constants.OPEN_PAGE, "Stundenplan", guestButton);
     }
 
     public boolean checkField() {
@@ -47,8 +51,8 @@ public class LoginController{
         return true;
     }
 
-    public void changeView(String path, String title) {
-        Stage stage = getCurrentStage();
+    public void changeView(String path, String title, Button button) {
+        Stage stage = getCurrentStage(button);
         FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource(path));
         Scene scene = null;
         try {
@@ -62,8 +66,8 @@ public class LoginController{
         stage.show();
     }
 
-    private Stage getCurrentStage() {
-        return (Stage) guestButton.getScene().getWindow();
+    private Stage getCurrentStage(Button button) {
+        return (Stage) button.getScene().getWindow();
     }
 
 

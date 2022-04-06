@@ -13,3 +13,18 @@
     -fx-text-fill: black;
 
 }
+
+.grid-background {
+    -fx-background-color: #3f434a;
+}
+
+.grid-pane-radius {
+    -fx-background-radius: 40 0 0 40;
+}
+
+.logoutButton {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20px;
+
+
+}
