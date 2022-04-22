@@ -25,6 +25,12 @@
 .logoutButton {
     -fx-background-color: #ffffff;
     -fx-background-radius: 20px;
+}
 
 
+.split-pane-divider {
+-fx-border-style: solid;
+-fx-border-width: 0.01px;
+-fx-background-color: #211D5A;
+-fx-padding: 0 1 0 0;
 }
