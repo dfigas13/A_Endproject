@@ -10,7 +10,7 @@
             <fx:include source="left-view.fxml" />
          </left>
          <center>
-            <fx:include source="right-trainer.fxml" />
+            <fx:include source="trainer-viev.fxml" />
          </center>
       </BorderPane>
    </children>

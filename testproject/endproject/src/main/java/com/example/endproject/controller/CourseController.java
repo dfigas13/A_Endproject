@@ -1,4 +1,4 @@
 package com.example.endproject.controller;
 
-public class RightAdminController {
+public class CourseController {
 }
