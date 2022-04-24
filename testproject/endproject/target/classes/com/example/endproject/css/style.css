@@ -13,3 +13,29 @@
     -fx-text-fill: black;
 
 }
+
+.grid-background {
+    -fx-background-color: #3f434a;
+    -fx-text-fill: white;
+}
+
+.grid-background:hover {
+    -fx-text-fill: #58b7e0;
+}
+
+.grid-pane-radius {
+    -fx-background-radius: 40 0 0 40;
+}
+
+.logoutButton {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20px;
+}
+
+
+.split-pane-divider {
+-fx-border-style: solid;
+-fx-border-width: 0.01px;
+-fx-background-color: #211D5A;
+-fx-padding: 0 1 0 0;
+}

@@ -16,6 +16,11 @@
 
 .grid-background {
     -fx-background-color: #3f434a;
+    -fx-text-fill: white;
+}
+
+.grid-background:hover {
+    -fx-text-fill: #58b7e0;
 }
 
 .grid-pane-radius {

@@ -71,4 +71,11 @@ public class LoginController{
     }
 
 
+    @FXML
+    private void onLoginClick(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    private void onGuestClick(ActionEvent actionEvent) {
+    }
 }

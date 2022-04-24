@@ -2,6 +2,7 @@ module com.example.endproject {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
+    requires com.calendarfx.view;
 
 
     //opens com.example.endproject to javafx.fxml;
