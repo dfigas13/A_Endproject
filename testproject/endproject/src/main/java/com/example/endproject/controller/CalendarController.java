@@ -18,27 +18,41 @@ import java.time.LocalTime;
 
 public class CalendarController extends BaseController {
 
+    @FXML
+    private BorderPane borderCalender;
 
     @FXML
-    private BorderPane borderPane;
-
-    private void loadFXMLInBorderPaneCenter(String fxmlPath) throws IOException {
-
-        Parent newCenterRoot = FXMLLoader.load(getClass().getResource(fxmlPath));
-        borderPane.setCenter(newCenterRoot);
+    public void initialize() {
+        loadCalendarFXViewInBorderPaneCenter();
     }
 
     private void loadCalendarFXViewInBorderPaneCenter() {
+        System.setProperty("calendarfx.developer","true");
+
 
         CalendarView calendarView = new CalendarView();
         Calendar birthdays = new Calendar("Birthdays");
-        Calendar holidays = new Calendar("Holidays");
+        Calendar java = new Calendar("Java");
 
         birthdays.setStyle(Calendar.Style.STYLE1);
-        holidays.setStyle(Calendar.Style.STYLE2);
+        java.setStyle(Calendar.Style.STYLE2);
+
+        /*Entry<String> entry = new Entry<>("Java");
+        Interval interval = new Interval();
+        entry.setInterval(interval);*/
+
+      /*  model.bookings.forEach(element -> {
+            Entry<Booking> entry = new Entry<>(element.getCourse().getCourseName());
+            Interval interval = new Interval(element.getDateTimeStart(), element.getDateTimeStart(),
+                    ZoneId.systemDefault());
+            entry.setInterval(interval);
+            java.addEntries(entry);
+        });
+*/
+
 
         CalendarSource myCalendarSource = new CalendarSource("My Calendars");
-        myCalendarSource.getCalendars().addAll(birthdays, holidays);
+        myCalendarSource.getCalendars().addAll(birthdays, java);
 
         calendarView.getCalendarSources().addAll(myCalendarSource);
 
@@ -67,29 +81,14 @@ public class CalendarController extends BaseController {
         updateTimeThread.setPriority(Thread.MIN_PRIORITY);
         updateTimeThread.setDaemon(true);
         updateTimeThread.start();
+        //developer console hinzufügen
         calendarView.setShowDeveloperConsole(true);
-
-        borderPane.setCenter(new CalendarView());
+        borderCalender.setCenter(calendarView);
     }
 
-    @FXML
-    private void initialize() {
 
-        // loadCalendarFXViewInBorderPaneCenter();
 
-        model.pathForDetailViewProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
 
-                if (newValue != null) {
-                    try {
-                        loadFXMLInBorderPaneCenter(newValue);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        });
 
-    }
+
 }

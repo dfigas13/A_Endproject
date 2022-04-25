@@ -9,5 +9,7 @@ public class Constants {
 
 
 
+    public static final  String CALENDAR_PAGE = "/com/example/endproject/fxml/calendar-view.fxml";
+
 
 }
