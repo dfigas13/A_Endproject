@@ -14,6 +14,8 @@ public class Model {
         return pathForDetailView;
     }
 
+
+
     public void setPathForDetailView(String pathForDetailView) {
         this.pathForDetailView.set(pathForDetailView);
     }
