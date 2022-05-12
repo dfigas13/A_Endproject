@@ -23,7 +23,7 @@ public class CalendarController extends BaseController {
 
     @FXML
     public void initialize() {
-        loadCalendarFXViewInBorderPaneCenter();
+        //loadCalendarFXViewInBorderPaneCenter();
     }
 
     private void loadCalendarFXViewInBorderPaneCenter() {

@@ -32,7 +32,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="logout" mnemonicParsing="false" styleClass="logoutButton" stylesheets="@../css/style.css" text="LOGOUT" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+      <Button fx:id="logout" mnemonicParsing="false" prefHeight="29.0" prefWidth="151.0" styleClass="logoutButton" stylesheets="@../css/style.css" text="LOGOUT" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
          <graphic>
             <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -44,14 +44,14 @@
             <Font size="13.0" />
          </font>
       </Button>
-      <Button fx:id="calendarId" mnemonicParsing="false" onAction="#onCalendarBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="KALENDER" GridPane.rowIndex="1" />
-      <Button fx:id="locationId" mnemonicParsing="false" onAction="#onLocationBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="STANDORT" GridPane.rowIndex="2" />
-      <Button fx:id="coachId" mnemonicParsing="false" onAction="#onCoachBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="TRAINER" GridPane.rowIndex="3" />
-      <Button fx:id="roomId" mnemonicParsing="false" onAction="#onRoomBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="RÄUME" GridPane.rowIndex="4" />
-      <Button fx:id="courseId" mnemonicParsing="false" onAction="#onCourseBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="KURSE" GridPane.rowIndex="5" />
-      <Button fx:id="programId" mnemonicParsing="false" onAction="#onProgramBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="PROGRAMM" GridPane.rowIndex="6" />
+      <Button fx:id="calendarId" mnemonicParsing="false" onAction="#onCalendarBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="KALENDER        " GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Button fx:id="locationId" mnemonicParsing="false" onAction="#onLocationBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="STANDORT       " GridPane.rowIndex="2" />
+      <Button fx:id="coachId" mnemonicParsing="false" onAction="#onCoachBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="TRAINER            " GridPane.rowIndex="3" />
+      <Button fx:id="roomId" mnemonicParsing="false" onAction="#onRoomBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="RÄUME              " GridPane.rowIndex="4" />
+      <Button fx:id="courseId" mnemonicParsing="false" onAction="#onCourseBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="KURSE              " GridPane.rowIndex="5" />
+      <Button fx:id="programId" mnemonicParsing="false" onAction="#onProgramBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="PROGRAMM     " GridPane.rowIndex="6" />
       <Button fx:id="equipmentId" mnemonicParsing="false" onAction="#onEquipmentBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="AUSSTATTUNG" GridPane.rowIndex="7" />
-      <Button fx:id="userId" mnemonicParsing="false" onAction="#onUserBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="USER" GridPane.rowIndex="8" />
+      <Button fx:id="userId" mnemonicParsing="false" onAction="#onUserBtn" prefHeight="40.0" prefWidth="300.0" styleClass="grid-background" text="USER                 " GridPane.rowIndex="8" />
       <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
          <image>
             <Image url="@../images/Home-icon.png" />

@@ -41,7 +41,8 @@ public class LoginController{
 
     @FXML
     private void guestLog(ActionEvent actionEvent) {
-        changeView(Constants.OPEN_PAGE, "Stundenplan", guestButton);
+        changeView(Constants.ADMIN_VIEW, "Stundenplan");
+
     }
 
     public boolean checkField() {
@@ -51,8 +52,8 @@ public class LoginController{
         return true;
     }
 
-    public void changeView(String path, String title, Button button) {
-        Stage stage = getCurrentStage(button);
+    public void changeView(String path, String title) {
+        Stage stage = getCurrentStage();
         FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource(path));
         Scene scene = null;
         try {
@@ -66,8 +67,8 @@ public class LoginController{
         stage.show();
     }
 
-    private Stage getCurrentStage(Button button) {
-        return (Stage) button.getScene().getWindow();
+    private Stage getCurrentStage() {
+        return (Stage) guestButton.getScene().getWindow();
     }
 
 
@@ -77,5 +78,6 @@ public class LoginController{
 
     @FXML
     private void onGuestClick(ActionEvent actionEvent) {
+        changeView(Constants.ADMIN_VIEW, "Admin View");
     }
 }
